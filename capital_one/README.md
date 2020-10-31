@@ -9,9 +9,11 @@ Currently, it supports the following file extension:
 
 
 ### Assumptions
-1. The input file must be compiled program. Or, at least, the string " " and multi-line comment symbol(if applicable) must be closed closed properly.
-2. My definition of "block symbol":
+1. The input file must be compiled program. Or, at least, the string " " and multi-line comment symbol(if applicable) must be closed properly.
+2. My definition of "block comments":
+
     2.1 language with no multi-line syntax: A comment will be only considered as a block comment if it contains at least two consecutive lines that start with a comment symbol.
+    
     2.2 language with multi-line syntax: A comment will be considered as a block comment as long as it is surrounded
     by a pair of block comment symbol.
 
@@ -31,8 +33,8 @@ For example, if you want to add language that has no single line comment syntax 
 There are three files for this program Please see detailed explanations in the docstring.
 
 1. `main.py` -> main program
-2. `parser.py` -> contains a abstract class `Parser` and two child classes `NonMultiLineParser` abd `MultiLineParser`
-3. `support_extension.py` -> a json file of currently supported file extensions. It features some common programming languages and you can extend it very simply.
+2. `parser.py` -> contains a abstract class `Parser` and two child classes `NonMultiLineParser` and `MultiLineParser`
+3. `support_extension.py` -> a single variable for all currently supported file extensions. It features some common programming languages and you can extend it very simply.
 
 
 ### Installation Prerequisite
